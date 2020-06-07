@@ -1,8 +1,12 @@
-from django.http import HttpResponse
+from django.http import JsonResponse
 import redis
 
-r = redis.Redis()
+r = redis.StrictRedis(charset="utf-8", decode_responses=True)
 
 def getBatteries(request):
-    return HttpResponse("Hello, world")
+	vals=[]
+	keys = r.keys()
+	for key in keys:
+		vals.append(r.hgetall(key))
+	return JsonResponse(vals, safe=False)
 
