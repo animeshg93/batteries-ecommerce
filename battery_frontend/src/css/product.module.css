@@ -1,0 +1,28 @@
+
+.productPage{
+	width: 100%;
+	height: 100%;
+}
+
+.product {
+	background-color: ;
+	text-align: center;
+	margin: 10px;
+	height: 250px;
+	width: 250px;
+	transform: translate(25%, 25%);
+	display: inline-block;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+.productMetadata{
+	margin-bottom: 5px;
+}
+
+.image{
+	height: 150px;
+	width: 100%;
+	
+}
