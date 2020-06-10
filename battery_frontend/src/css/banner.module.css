@@ -6,3 +6,13 @@
 	justify-content: left;
 	align-items: center;
 }
+
+.footer {
+	background-color: red;
+	text-align: center;
+	height: 100px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	transform: translate(0%, 5%);
+}
