@@ -2,12 +2,13 @@ import React from 'react'
 import styles from '../css/product.module.css'
 
 
-export default function Product(){
+export default function Product(props){
+	var battery = props.battery
 	return(
 		<div className={styles.product}>
-			<img className={styles.image} src="https://www.renderhub.com/unos/battery-coin-cell/battery-coin-cell-01.jpg" />
-			<h4 >Lithium battery </h4>
-			<h4 className={styles.productMetadata}>$16.99</h4>
+			<img className={styles.image} src={battery["image"]} />
+			<h4>{battery["name"]}</h4>
+			<h4 className={styles.productMetadata}>{battery["price"]}</h4>
 		</div>
 	);
 }

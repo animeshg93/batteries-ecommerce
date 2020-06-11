@@ -9,7 +9,6 @@ function App() {
   	<>
 	    <Banner />
 	    <ProductPage />
-	    <Footer />
     </>
   );
 }
