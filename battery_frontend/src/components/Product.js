@@ -8,7 +8,7 @@ export default function Product(props){
 		<div className={styles.product}>
 			<img className={styles.image} src={battery["image"]} />
 			<h4>{battery["name"]}</h4>
-			<h4 className={styles.productMetadata}>{battery["price"]}</h4>
+			<h4>{battery["price"]}</h4>
 		</div>
 	);
 }
