@@ -1,24 +1,20 @@
-import React,{useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import styles from '../css/product.module.css'
-import Product from './Product'
 
-export default function ProductPage(){
-	const[batteryList, setBatteryList]=useState([])
+
+export default function ProductPage(props){
+	var key = props.match.params.id
+	const [battery,setBattery]= useState({})
 
 	useEffect(() => {
-		fetch('http://localhost:3000/batteries/getBatteries')
+		fetch('http://localhost:3000/batteries/getBatteries/'+key)
 		.then(resp=> resp.json())
-		.then(data=>setBatteryList(data))	
-	},[])
-
-	var batteries = [];
-	batteryList.map(batteryProduct => (
-		batteries.push(<Product battery={batteryProduct} />)
-	))
+		.then(data=>setBattery(data))	
+	},{})
 
 	return(
-		<div className={styles.productPage}>
-			{batteries}
+		<div>
+			{battery.name}
 		</div>
 	);
 }
