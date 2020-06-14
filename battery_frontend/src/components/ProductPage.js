@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import styles from '../css/product.module.css'
+import styles from '../css/battery.module.css'
 
 
 export default function ProductPage(props){
@@ -14,7 +14,12 @@ export default function ProductPage(props){
 
 	return(
 		<div>
-			{battery.name}
+			<div className={styles.imageContainer}>
+				<img className={styles.image} src={battery.image} />
+			</div>
+			<div className={styles.title}>
+				<h1>{battery.name}</h1>
+			</div>
 		</div>
 	);
 }
