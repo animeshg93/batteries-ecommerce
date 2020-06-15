@@ -1,14 +1,11 @@
-.batteryContainer:after {
-	 content: "";
-  display: table;
-  clear: both;
+.productContainer {
+	display: flex;
+	margin: 2%;
 }
 
 .imageContainer {
-	margin-left: 5%;
-	margin-top: 2%;
 	float: left;
-	width: 40%;
+	margin-right: 10%
 }
 
 .image {
@@ -16,7 +13,14 @@
 }
 
 .title {
-	float: left;
-	width: 50%;
-	justify-content: left;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-right: 10%
 }
+
+.price {
+
+}
+
