@@ -1,18 +1,25 @@
-.banner {
+.nav{
+	display: block;
+	height: 70px;
 	background-color: red;
-	text-align: center;
-	height: 100px;
-	display: flex;
-	justify-content: left;
-	align-items: center;
 }
 
-.footer {
-	background-color: red;
-	text-align: center;
-	height: 100px;
-	display: flex;
-	justify-content: left;
-	align-items: center;
+ul {
+	list-style-type: none;
+	margin: 0;
 	position: relative;
+	display: block;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	margin-right: 20px;
+	float: right;
+}
+
+.cart {
+	height: 70px;
 }

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import styles from '../css/battery.module.css'
 
 
-export default function ProductPage(props){
+export default function BatteryPage(props){
 	var key = props.match.params.id
 	const [battery,setBattery]= useState({})
 
@@ -17,11 +17,21 @@ export default function ProductPage(props){
 			<div className={styles.imageContainer}>
 				<img className={styles.image} src={battery.image} />
 			</div>
-			<div className={styles.title}>
+			<div className={styles.productInfo}>
 				<h1>{battery.name}</h1>
 				<h3>Price: {battery.price}</h3>
 			</div>
-			<div className={styles.price}>
+			{showQuantity(battery)}
+		</div>
+	);
+}
+
+function showQuantity(battery){
+	if(battery.quantity != 0){
+		return(
+			<div>
+				<h2 className={styles.stock}>IN STOCK</h2>
+				<label>Quantity: </label>
 				<select id="cars" name="cars">
 				    <option value="1">1</option>
 				    <option value="2">2</option>
@@ -29,6 +39,6 @@ export default function ProductPage(props){
 				    <option value="4">4</option>
 				</select>
 			</div>
-		</div>
-	);
+			);
+		}
 }

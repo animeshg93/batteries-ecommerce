@@ -1,8 +1,7 @@
 import React from 'react';
 import Banner from './components/Banner'
-import Footer from './components/Footer'
-import AllProducts from './components/AllProducts'
-import ProductPage from './components/ProductPage'
+import AllBatteries from './components/AllBatteries'
+import BatteryPage from './components/BatteryPage'
 import { BrowserRouter, Route } from "react-router-dom"
 
 function App() {
@@ -10,8 +9,8 @@ function App() {
   	<>
 	  	<Banner />
 	  	<BrowserRouter>
-		    <Route path="/batteries" component={AllProducts} exact/>
-		    <Route path="/batteries/:id" component={ProductPage} />
+		    <Route path="/batteries" component={AllBatteries} exact/>
+		    <Route path="/batteries/:id" component={BatteryPage} />
 	    </BrowserRouter>
     </>
   );

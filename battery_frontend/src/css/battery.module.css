@@ -5,22 +5,26 @@
 
 .imageContainer {
 	float: left;
-	margin-right: 10%
+	margin-right: 5%;
+	width: 30%;
 }
 
 .image {
-	height: 400px;
+	height: 500px;
+	width: 100%;
 }
 
-.title {
+.productInfo {
 	height: 400px;
 	display: flex;
+	width: 50%;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-right: 10%
+	margin-right: 3%;
+	text-align: center;
 }
 
-.price {
-
+.stock {
+	color: green
 }
 

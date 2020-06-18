@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../css/product.module.css'
 
 
-export default function Product(props){
+export default function Battery(props){
 	var battery = props.battery
 	return(
 		<div className={styles.product}>

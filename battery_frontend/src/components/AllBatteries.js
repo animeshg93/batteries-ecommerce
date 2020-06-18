@@ -1,8 +1,8 @@
 import React,{useEffect, useState} from 'react'
 import styles from '../css/product.module.css'
-import Product from './Product'
+import Battery from './Battery'
 
-export default function AllProducts(){
+export default function AllBatteries(){
 	const[batteryList, setBatteryList]=useState([])
 
 	useEffect(() => {
@@ -13,7 +13,7 @@ export default function AllProducts(){
 
 	var batteries = [];
 	batteryList.map(batteryProduct => (
-		batteries.push(<Product battery={batteryProduct} />)
+		batteries.push(<Battery battery={batteryProduct} />)
 	))
 
 	return(
