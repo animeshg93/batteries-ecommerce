@@ -1,25 +1,34 @@
-.nav{
-	display: block;
-	height: 70px;
-	background-color: red;
+.topNav {
+	background-color: #998;
+	display: flex;
+    justify-content: flex-end;
+    height: 80px;
 }
 
-ul {
-	list-style-type: none;
-	margin: 0;
-	position: relative;
-	display: block;
-}
-
-.left {
-	float: left;
+.brand {
+  color: #f2f2f2;
+  text-align: center;
+  margin-right:auto;
+  margin-left: 2%;
 }
 
 .right {
-	margin-right: 20px;
-	float: right;
+	
+}
+
+.counter {
+	position: absolute;
+	right: 40px;
+	top: 5px;
 }
 
 .cart {
-	height: 70px;
+	background-image: url(https://cdn0.iconfinder.com/data/icons/shopping-cart-26/1000/Shopping-Basket-02-512.png);
+	background-repeat: no-repeat;
+	background-size: 70px;
+	height: 80px;
+	width: 80px;
+	right: 0px;
+	position: absolute;
+	display: block
 }
