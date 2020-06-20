@@ -8,7 +8,7 @@ export default function Banner(){
 			<div className={styles.right}>
 				<span className={styles.cart}></span>
 			</div>
-			<span className={styles.counter}>19</span>
+			<span className={styles.counter}>7</span>
 		</div>
 	);
 }

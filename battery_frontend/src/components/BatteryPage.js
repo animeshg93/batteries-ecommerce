@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import styles from '../css/battery.module.css'
-
+import QuantityForm from './QuantityForm'
 
 export default function BatteryPage(props){
 	var key = props.match.params.id
@@ -21,24 +21,8 @@ export default function BatteryPage(props){
 				<h1>{battery.name}</h1>
 				<h3>Price: {battery.price}</h3>
 			</div>
-			{showQuantity(battery)}
+			<QuantityForm battery={battery} name={key}/>
 		</div>
 	);
 }
 
-function showQuantity(battery){
-	if(battery.quantity != 0){
-		return(
-			<div>
-				<h2 className={styles.stock}>IN STOCK</h2>
-				<label>Quantity: </label>
-				<select id="cars" name="cars">
-				    <option value="1">1</option>
-				    <option value="2">2</option>
-				    <option value="3">3</option>
-				    <option value="4">4</option>
-				</select>
-			</div>
-			);
-		}
-}

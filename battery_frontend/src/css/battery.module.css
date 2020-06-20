@@ -24,7 +24,17 @@
 	text-align: center;
 }
 
+.quantity {
+	display: block
+}
+
+.submitButton {
+	margin-top: 50%;
+	display: block;
+}
+
 .stock {
+	display: block;
 	color: green
 }
 

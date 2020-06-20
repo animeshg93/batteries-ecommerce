@@ -15,3 +15,6 @@ def getBatteries(request):
 def getSingleBattery(request, slug):
 	battery = r.hgetall(slug)
 	return JsonResponse(battery, safe=False)
+
+def validateQuantity(request):
+	
