@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import styles from '../css/battery.module.css'
 
 export default function QuantityForm(props){
-	const [quantity,setQuantity]=useState(0)
+	const [quantity,setQuantity]=useState(1)
 
 	if(props.battery.quantity != 0){
 		return(
@@ -23,6 +23,15 @@ export default function QuantityForm(props){
 }
 
 function sendQuantityAndBattery(key, quantity){
-	console.log(key+quantity)
+	fetch('http://localhost:3000/batteries/validateBatteryQuantity/',{
+		method :'post',
+		headers: {'Content-Type':'application/jaon'},
+		body: JSON.stringify({
+		    "key": key,
+		    "quantity": quantity
+	    })
+	})
+		.then(resp=> resp.json())
+		.then(data=>console.log(data))
 }
 
