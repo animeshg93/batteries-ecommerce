@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import styles from '../css/battery.module.css'
+import { connect } from 'react-redux'
 
-export default function QuantityForm(props){
+
+function QuantityForm(props){
 	const [quantity,setQuantity]=useState(1)
 
 	if(props.battery.quantity != 0){
@@ -15,23 +17,36 @@ export default function QuantityForm(props){
 				    <option value="3">3</option>
 				    <option value="4">4</option>
 				</select>
-				<button className={styles.submitButton} onClick={e=>sendQuantityAndBattery(props.name, quantity)}>Add to cart</button>
+				<button className={styles.submitButton} onClick={e=>sendQuantityAndBattery(props, quantity)}>Add to cart</button>
 			</div>
 			);
 	}
 	else return null;
 }
 
-function sendQuantityAndBattery(key, quantity){
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatch
+  }
+}
+
+function sendQuantityAndBattery(props, quantity){
 	fetch('http://localhost:3000/batteries/validateBatteryQuantity/',{
 		method :'post',
 		headers: {'Content-Type':'application/jaon'},
 		body: JSON.stringify({
-		    "key": key,
+		    "key": props.name,
 		    "quantity": quantity
 	    })
 	})
 		.then(resp=> resp.json())
-		.then(data=>console.log(data))
+		.then(()=>{
+			props.dispatch({
+				type:"change_quantity",
+				quantity: quantity
+			})
+		})
 }
+
+export default connect(mapDispatchToProps)(QuantityForm)
 
