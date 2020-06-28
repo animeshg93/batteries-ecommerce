@@ -40,10 +40,10 @@ function sendQuantityAndBattery(props, quantity){
 	    })
 	})
 		.then(resp=> resp.json())
-		.then(()=>{
+		.then(data=>{
 			props.dispatch({
 				type:"change_quantity",
-				quantity: quantity
+				quantity: data.totalQuantity
 			})
 		})
 }
