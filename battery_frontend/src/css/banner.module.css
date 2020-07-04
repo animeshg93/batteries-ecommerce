@@ -10,11 +10,15 @@
   text-align: center;
   margin-right:auto;
   margin-left: 2%;
+  overflow: hidden;
 }
 
-.right {
-	margin-right: 5%; 
-	
+.buy {
+	position: relative;
+	display: block;
+	right: 100px;
+	top: 25px;
+	margin-left: 10px;
 }
 
 .counter {

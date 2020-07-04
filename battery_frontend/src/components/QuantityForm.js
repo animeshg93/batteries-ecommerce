@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import styles from '../css/battery.module.css'
 import { connect } from 'react-redux'
 

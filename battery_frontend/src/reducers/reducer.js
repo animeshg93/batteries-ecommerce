@@ -5,8 +5,6 @@ const initialState = {
 function rootReducer(state = initialState, action) {
 	switch (action.type){
 		case "change_quantity":
-			console.log(state.quantity)
-
 			return Object.assign({}, state, {
 		      quantity: parseInt(action.quantity)
 		    })
