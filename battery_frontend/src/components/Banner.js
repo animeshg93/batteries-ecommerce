@@ -12,12 +12,18 @@ function Banner({ quantity}){
 			<Link className={styles.brand} to="/batteries"><h1>ANIMESH BATTERIES</h1></Link>
 			<div className={styles.right}>
 				<span className={styles.cart}></span>
+				<button onClick={buy}>BUY</button> 
 			</div>
 			<span className={styles.counter}>{quantity}</span>
-
 			
 		</div>
 	);
+}
+
+function buy(){
+	fetch('http://localhost:3000/batteries/buy')
+		.then(resp=> resp.json())
+		.then(data=>console.log(data))
 }
 
 const mapStateToProps = state => {

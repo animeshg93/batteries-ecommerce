@@ -42,4 +42,11 @@ def storeItems(key, quantity, amount):
 		purchasedItems[key]["quantity"] += quantity
 	else:
 		purchasedItems[key]={"quantity":quantity, "amount": float(amount)}
-	print(purchasedItems)
+
+def purchaseItems(request):
+	totalAmount = 0;
+	for key in purchasedItems:
+		item = purchasedItems[key]
+		totalAmount += item["quantity"]* item["amount"]
+	return JsonResponse({"total":totalAmount}, safe=False)
+

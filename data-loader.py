@@ -11,4 +11,3 @@ r.hmset("Duracell-4-Ct",{"image":"https://m.media-amazon.com/images/I/71B+sFbk3F
 r.hmset("AmazonBasics-Coin-2-Ct",{"image":"https://images-na.ssl-images-amazon.com/images/I/61WfS6xHLxL._AC_UL200_SR200,200_.jpg", "name":"AmazonBasics CR1616 Coin 2 Ct","price":"3.51","quantity":45})
 r.hmset("Energizer-Coin-2-Ct",{"image":"https://images-na.ssl-images-amazon.com/images/I/819A0g-%2BaJL._AC_UL200_SR200,200_.jpg", "name":"Energizer 2016 2 Ct","price":"2.44","quantity":1000})
 r.hmset("LiCB-Coin-20-Ct",{"image":"https://images-na.ssl-images-amazon.com/images/I/81zyi4tOtYL._AC_UL200_SR200,200_.jpg", "name":"LiCB LR44 Coin Cell 20 Ct","price":"5.00","quantity":8457})
-
